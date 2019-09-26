@@ -23,3 +23,13 @@ describe('uncludes', function () {
         expect(interval3.overlaps(interval2)).toBe(true);
     });
 });
+
+describe('union', function () {
+    test('interval1 union interval2', () => {
+        expect(interval1.union(interval2)).toStrictEqual([interval1, interval2]);
+    });
+
+    test('interval3 union interval2', () => {
+        expect(interval3.union(interval2)).toStrictEqual([interval3]);
+    });
+});
