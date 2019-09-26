@@ -13,3 +13,13 @@ describe('overlaps', function () {
         expect(interval1.overlaps(interval3)).toBe(true);
     });
 });
+
+describe('uncludes', function () {
+    test('interval1 doesn\' include interval2', () => {
+        expect(interval1.overlaps(interval2)).toBe(false);
+    });
+
+    test('interval3 includes interval2', () => {
+        expect(interval3.overlaps(interval2)).toBe(true);
+    });
+});
