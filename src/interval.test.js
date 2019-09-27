@@ -33,7 +33,7 @@ describe('includes', function () {
 describe('union', function () {
     test.each([
         [new Interval(1, 4), new Interval(5, 9), [new Interval(1, 4), new Interval(5, 9)]],
-        [new Interval(3, 11), new Interval(5, 9), [interval3]],
+        [new Interval(3, 11), new Interval(5, 9), [new Interval(3, 11)]],
     ])(
         '%s union %s equals %s',
         (interval1, interval2, expected) => {
