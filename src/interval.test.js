@@ -1,10 +1,5 @@
 const Interval = require('./interval');
 
-var interval1 = new Interval(1, 4);
-var interval2 = new Interval(5, 9);
-var interval3 = new Interval(3, 11);
-
-
 describe('overlaps', function () {
     test.each([
         [new Interval(1, 4), new Interval(5, 9), false],
