@@ -1,5 +1,5 @@
 {
-  "name": "test-tp",
+  "name": "ensiie-software-testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kirouane/test-tp.git"
+    "url": "git+https://github.com/lrabane/ENSIIE-Software-Testing.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kirouane/test-tp/issues"
+    "url": "https://github.com/lrabane/ENSIIE-Software-Testing/issues"
   },
-  "homepage": "https://github.com/Kirouane/test-tp#readme",
+  "homepage": "https://github.com/lrabane/ENSIIE-Software-Testing#readme",
   "devDependencies": {
     "@stryker-mutator/core": "^2.1.0",
     "@stryker-mutator/javascript-mutator": "^2.1.0",
