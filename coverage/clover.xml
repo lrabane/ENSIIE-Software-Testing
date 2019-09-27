@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569573187559" clover="3.2.0">
-  <project timestamp="1569573187560" name="All files">
-    <metrics statements="58" coveredstatements="56" conditionals="42" coveredconditionals="38" methods="13" coveredmethods="9" elements="113" coveredelements="103" complexity="0" loc="58" ncloc="58" packages="1" files="2" classes="2"/>
+<coverage generated="1569575670857" clover="3.2.0">
+  <project timestamp="1569575670857" name="All files">
+    <metrics statements="58" coveredstatements="58" conditionals="42" coveredconditionals="40" methods="13" coveredmethods="11" elements="113" coveredelements="109" complexity="0" loc="58" ncloc="58" packages="1" files="2" classes="2"/>
     <file name="interval.js" path="/home/lucas/software-testing/tp-jest/src/interval.js">
-      <metrics statements="11" coveredstatements="9" conditionals="10" coveredconditionals="6" methods="7" coveredmethods="3"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="4" count="4" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+      <metrics statements="11" coveredstatements="11" conditionals="10" coveredconditionals="8" methods="7" coveredmethods="5"/>
+      <line num="3" count="16" type="stmt"/>
+      <line num="4" count="16" type="stmt"/>
+      <line num="8" count="15" type="stmt"/>
+      <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="46" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="66" count="2" type="stmt"/>
       <line num="67" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="69" count="1" type="cond" truecount="2" falsecount="2"/>
