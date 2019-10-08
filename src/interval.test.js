@@ -36,3 +36,15 @@ describe('union', function () {
         }
     );
 });
+
+describe('intersection', function () {
+    test.each([
+        [new Interval(1, 4), new Interval(5, 9), null],
+        [new Interval(3, 11), new Interval(5, 9), new Interval(5, 9)],
+    ])(
+        '%s intersection %s equals %s',
+        (interval1, interval2, expected) => {
+            expect(interval1.intersection(interval2)).toStrictEqual(expected);
+        }
+    );
+});
