@@ -116,7 +116,28 @@ class Interval {
      * @returns {Interval[]}
      */
     exclusion(interval) {
-
+        var exclusion = []
+        if(this.start == interval.start && this.end == interval.end){
+            return exclusion
+        }
+        else if(this.includes(interval)){
+            exclusion.push(new Interval(this.start,interval.start), new Interval(interval.end,this.end))
+        }
+        else if(interval.includes(this)){
+            exclusion.push(new Interval(interval.start,this.start), new Interval(this.end,interval.end))
+        }
+        else if(!this.overlaps(interval)){
+            exclusion.push(this,interval)
+        }
+        else{
+            if(this.start <= interval.start){
+                exclusion.push(new Interval(this.start,interval.start),new Interval(this.end,interval.end))
+            }
+            else{
+                exclusion.push(new Interval(interval.start,this.start),new Interval(interval.end,this.end))
+            }
+        }
+        return exclusion
     };
 }
 

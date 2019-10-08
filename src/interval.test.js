@@ -48,3 +48,15 @@ describe('intersection', function () {
         }
     );
 });
+
+describe('exclusion', function () {
+    test.each([
+        [new Interval(1, 24), new Interval(21, 34), [new Interval(1, 21), new Interval(24, 34)]],
+        [new Interval(1, 24), new Interval(29, 58), [new Interval(1, 24), new Interval(29, 58)]],
+    ])(
+        '%s exclusion %s equals %s',
+        (interval1, interval2, expected) => {
+            expect(interval1.exclusion(interval2)).toStrictEqual(expected);
+        }
+    );
+});
