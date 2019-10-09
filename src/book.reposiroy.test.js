@@ -52,7 +52,6 @@ describe('Book repository Get', function () {
 
         const dbMock = {
             get : jest.fn().mockReturnThis(),
-            find : jest.fn().mockReturnThis(),
             value : jest.fn().mockReturnValue([
                 {
                     'id': 0,
