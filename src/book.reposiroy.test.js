@@ -33,7 +33,7 @@ describe('Book repository Count', function () {
 
 describe('Book repository Price', function () {
 
-    test('Count 42 books', () => {
+    test('Get total price of 4,13,17,8,11,15', () => {
 
         const dbMock = {
             get : jest.fn().mockReturnThis(),
@@ -43,5 +43,44 @@ describe('Book repository Price', function () {
         const repository = new BookRepository(dbMock);
 
         expect(repository.getTotalPrice()).toBe(68);
+    });
+});
+
+describe('Book repository Get', function () {
+
+    test('Get LOTR', () => {
+
+        const dbMock = {
+            get : jest.fn().mockReturnThis(),
+            value : jest.fn().mockReturnValue([
+                {
+                    'id': 0,
+                    'name': 'The Lord of the Rings',
+                    'price' : 15.99,
+                    'added_at': '2012-08-14'
+                },
+                {
+                    'id': 1,
+                    'name': 'The Alchemist',
+                    'price' : 12.62,
+                    'added_at': '2014-04-15'
+                },
+                {
+                    'id': 2,
+                    'name': 'The Little Prince',
+                    'price' : 9.59,
+                    'added_at': '2000-05-15'
+                },
+            ])
+            
+        };
+        const repository = new BookRepository(dbMock);
+
+        expect(repository.getBookByName('The Lord of the Rings')).toStrictEqual([{
+            'id': 0,
+            'name': 'The Lord of the Rings',
+            'price' : 15.99,
+            'added_at': '2012-08-14'
+        }]);
     });
 });
